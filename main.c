@@ -63,7 +63,7 @@ int main(int argc, char **argv) {
   sigaction( SIGALRM, &act, 0 );
   
   while (true) {
-    ualarm( 10000, 0 );
+    ualarm( 5000, 0 );
    
     // Uses system timer which indirectly uses interrupt 
     // to determine the next time to signal SIGALRM
