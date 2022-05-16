@@ -1,6 +1,6 @@
 Timer Blinking LEDs
 ===================================
-This causes two LEDs to blink on a Raspberry Pi 3 B while in Linux. (It is not bare metal).
+This causes two LEDs to blink on a Raspberry Pi 3 B while in Linux. (It is not bare metal). This uses GPIO's 23 and 17.
 One LED blinks every 65 ms while the other blinks five times every 3 seconds.
 
 Dependencies
@@ -8,8 +8,7 @@ Dependencies
 This uses the GPIOD Library from:
 github.com/brgl/libgpiod
 
-It is included as a submodule.
-
+for dealing with the GPIO connections the LEDS.
 
 Build Instructions
 ===================================
