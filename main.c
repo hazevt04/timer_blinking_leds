@@ -20,22 +20,6 @@ struct gpiod_line *led1;    // Red LED 1
 
 int led_alarm_count;
 
-void led1_alarm( int sig_num ) {
-  if ( sig_num == SIGALRM ) {
-    ++led_alarm_count;
-
-    if ( led_alarm_count == NUM_LED0_PERIODS ) {
-      for( int index = 0; index < LED1_NUM_BLINKS; ++index ) {
-          gpiod_line_set_value(led1, 1);
-          usleep(LED1_BLINK_PERIOD/2);
-          gpiod_line_set_value(led1, 0);
-          usleep(LED1_BLINK_PERIOD/2);
-      } // end of for( int index = 0; index < LED1_NUM_BLINKS; ++index ) {
-      led_alarm_count = 0;
-    } // end of if ( led_alarm_count == NUM_LED0_PERIODS ) {
-  } // end of if ( sig_num == SIGALRM ) {
-}
-
 void led_alarm( int sig_num ) {
   if ( sig_num == SIGALRM ) {
     ++led_alarm_count;
