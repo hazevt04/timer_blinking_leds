@@ -8,7 +8,7 @@ Dependencies
 This uses the GPIOD Library from:
 github.com/brgl/libgpiod
 
-for dealing with the GPIO connections the LEDS.
+for dealing with the GPIO connections to the LEDS.
 
 Build Instructions
 ===================================
